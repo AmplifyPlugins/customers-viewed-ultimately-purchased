@@ -1,6 +1,6 @@
 <?php
 	/*
-	Plugin Name: Customers Viewed Ultimately Purchased
+	Plugin Name: Customers Viewed Ultimately Purchased for WooCommerce
 	Plugin URI: https://amplifyplugins.com
 	Description: Display related products based on actual customer's purchasing behavior.
 	Requires at least: 4.9.6
