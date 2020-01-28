@@ -9,7 +9,7 @@
 	WC requires at least: 3.9.0
 	WC tested up to: 3.9.0
 	Author: Scott DeLuzio
-	Author URI: https://amplifyplugins.com
+	Author URI: https://scottdeluzio.com
 	Text Domain: customers-viewed-ultimately-purchased
 	*/
 
