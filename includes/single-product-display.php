@@ -19,9 +19,7 @@ function cvup_related_products( $query, $product_id, $args ){
 	global $product, $wpdb;
 	$related_products = get_post_meta( $product->get_id(), '_cvup_related_products' );
 	if( $related_products ){
-		// rsort( $related_products );
 		$limit			= apply_filters( 'cvup_related_product_count', 10 );
-		// $top_related	= array_slice( $related_products, 0, $limit );
 		$related		= '';
 		foreach( $related_products[0] as $id => $qty ){
 			$related .= $id . ',';
@@ -42,4 +40,13 @@ function cvup_related_products( $query, $product_id, $args ){
 		);
 	}
 	return $query;
+}
+
+/**
+ * Modifies the default "Related Products" heading on WooCommerce product pages.
+ * Requires WooCommerce 3.9+ and a theme that does not override this filter with static text.
+ */
+add_filter( 'woocommerce_product_related_products_heading', 'cvup_relate_products_heading' );
+function cvup_relate_products_heading(){
+	return 'Customers who viewed this product ultimately purchased';
 }
